@@ -82,14 +82,11 @@
 	</p>
 </footer>
 <script>
-     getTxt = function (){
+  getMsg = function (){
   $.ajax({
-    url:'text.md',
+    url:'https://raw.githubusercontent.com/lsst-dm/lsp-landing-page/master/motd/internal.md',
     success: function (data){
-      console.log(data);
       temp = data.split('---',3);
-      console.log(temp[0]);
-      console.log(temp.length);
       for (i=0; i< temp.length; i++){
          var converter = new showdown.Converter({
              simpleLineBreaks: 'true',
@@ -105,7 +102,7 @@
     }
   });
 }
-     getTxt();
+     getMsg();
 </script>
 <!-- OneTrust Cookies Consent Notice (Production CDN, illinois.edu, en-GB) start -->
 <script src="https://cdn.cookielaw.org/consent/fd31c61a-15d6-4769-9802-5eafcc1098ba.js" type="text/javascript" charset="UTF-8"></script>
