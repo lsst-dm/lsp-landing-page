@@ -3,7 +3,7 @@
 The last 3 messages of the day  will be displayed in the LSP landing pages, which are read from these files:
 
 - [stable](stable.md)
-- [internal](internal.md)
+- [integration](integration.md)
 
 #### Format
 
