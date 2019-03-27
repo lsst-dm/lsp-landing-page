@@ -1,6 +1,6 @@
 .jumbotron {
     margin-bottom: 0px;
-    height: 350px;
+    height: 300px;
     color: black;
     background: transparent;
 }
@@ -38,4 +38,32 @@ footer {
     height: 20px;
     width: 90%;
     overflow: hidden;
+}
+
+.motd {
+      height:100px;
+      min-height:100px;
+      max-height:100px;
+      overflow: hidden;
+      color: black;
+}
+.carousel {
+  background: white;
+  border: 1px solid #eee;
+  padding: 2px;
+}
+
+ol.carousel-indicators li,
+ol.carousel-indicators li.active {
+  background-color: #999;
+  height: 10px;
+  width: 30px;
+  margin: 2;
+  display: inline;
+  border-radius: 0;
+  border: 0;
+}
+
+ol.carousel-indicators li.active {
+  background: #337ab7;
 }
