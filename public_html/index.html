@@ -6,9 +6,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/showdown/1.9.0/showdown.min.js"></script>
+"
   <link rel="shortcut icon" href="favicon.ico">
   <link rel="stylesheet" href="static/lsst_lsp.css" type="text/css"/>
 </head>
@@ -49,8 +52,25 @@
 <hr />
   </div>
 <hr />
-
-
+<span> <u>Message of the day</u> </span>
+<div id="messageOfTheDay" class="carousel slide" data-ride="false" data-wrap="false" data-interval="false">
+  <ol class="carousel-indicators">
+    <li data-target="#messageOfTheDay" data-slide-to="0" class="active"></li>
+    <li data-target="#messageOfTheDay" data-slide-to="1"></li>
+    <li data-target="#messageOfTheDay" data-slide-to="2"></li>
+  </ol>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <p class="motd" id="msg0"></p>
+    </div>
+    <div class="carousel-item">
+      <p class="motd" id="msg1"></p>
+    </div>
+    <div class="carousel-item">
+      <p class="motd" id="msg2"></p>
+    </div>
+  </div>
+</div>
 
   </div>
 
@@ -61,6 +81,32 @@
 		<a href="https://www.vpaa.uillinois.edu/resources/web_privacy">Web Privacy Notice</a>
 	</p>
 </footer>
+<script>
+     getTxt = function (){
+  $.ajax({
+    url:'text.md',
+    success: function (data){
+      console.log(data);
+      temp = data.split('---',3);
+      console.log(temp[0]);
+      console.log(temp.length);
+      for (i=0; i< temp.length; i++){
+         var converter = new showdown.Converter({
+             simpleLineBreaks: 'true',
+             strikethrough: 'true',
+             tables: 'true',
+             tasklists: 'true',
+             emoji: 'true'
+         }),
+         html = converter.makeHtml(temp[i]);
+         target = document.getElementById('msg'+i.toString()),
+         target.innerHTML = html;
+     };
+    }
+  });
+}
+     getTxt();
+</script>
 <!-- OneTrust Cookies Consent Notice (Production CDN, illinois.edu, en-GB) start -->
 <script src="https://cdn.cookielaw.org/consent/fd31c61a-15d6-4769-9802-5eafcc1098ba.js" type="text/javascript" charset="UTF-8"></script>
 <script type="text/javascript">
