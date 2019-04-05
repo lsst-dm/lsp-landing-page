@@ -1,5 +1,5 @@
 **April 5th, 2019**  
-This is the LSST Science Platform `stable`  
+This is the `stable` instance of the LSST Science Platform   
 Information about these services will be posted here  
 Check [here](https://github.com/lsst-dm/lsp-landing-page/blob/master/motd/stable.md) for a complete list of messages  
 
