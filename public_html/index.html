@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>LSST Science Platform: Integration</title>
+  <title>LSST Science Platform</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -22,7 +22,7 @@
   <div class="row">
   <div class="col-md-10" style="background-color:white; text-align: left">
     <h4><a href="https://www.lsst.org/" target="_blank">
-      <img src="static/lsst_logo.png" class="img" alt="lsst_logo" width="35%"></a> Welcome to the LSST Science Platform: Integration</h4>
+      <img src="static/lsst_logo.png" class="img" alt="lsst_logo" width="35%"></a> Welcome to the LSST Science Platform</h4>
 </div>
   <div class="col-md-2" style="background-color:white; text-align: right">
     <div class="menub">
@@ -84,7 +84,7 @@
 <script>
   getMsg = function (){
   $.ajax({
-    url:'https://raw.githubusercontent.com/lsst-dm/lsp-landing-page/master/motd/integration.md',
+    url:'https://raw.githubusercontent.com/lsst-dm/lsp-landing-page/master/motd/stable.md',
     success: function (data){
       temp = data.split('---',3);
       for (i=0; i< temp.length; i++){
