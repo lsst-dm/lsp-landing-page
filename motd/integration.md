@@ -1,3 +1,9 @@
+**May 21st, 2019**  
+The Science Platform instances `lsst-lsp-stable` and `lsst-lsp-int` are currently down for a major reconfiguration of the underlying Kubernetes clusters.  `lsst-lsp-int` may be up and down periodically all week as various integration and configuration change tests are performed.
+
+Check [here](https://github.com/lsst-dm/lsp-landing-page/blob/master/motd/integration.md) for a complete list of messages.
+
+---
 **May 20th, 2019**  
 The Science Platform instances `lsst-lsp-stable` and `lsst-lsp-int` will be taken down at 09:00 PDT on Tuesday 21 May 2019 for a major reconfiguration of the underlying Kubernetes clusters.
 The work is a step toward a more robust environment, more suitable for running production services, and includes measures like the provision of redundant head nodes.
