@@ -1,0 +1,14 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: landing-page-ingress
+spec:
+  rules:
+  - host: lsst-lsp-stable.ncsa.illinois.edu
+    http:
+      paths:
+      - backend:
+          serviceName: landing-page
+          servicePort: 80
+        path: /
+
