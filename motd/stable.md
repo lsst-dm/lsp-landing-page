@@ -1,3 +1,14 @@
+**May 21st, 2019**
+Partial service, particularly for JupyterLab, has been restored to the `lsst-lsp-stable` Science Platform instance.  Some instability may still be observed due to DNS caching issues.  
+Check [here](https://github.com/lsst-dm/lsp-landing-page/blob/master/motd/stable.md) for more details and the complete list of messages.
+
+Details (see also messages on #dm-lsp Slack):
+
+Following the extensive Kubernetes migration at NCSA, most services on `lsst-lsp-stable` have been restored, including the Notebook Aspect, the current and previous generations of the API Aspect (DAX) services, and logging.  The Portal Aspect will be restored when the team returns to work tomorrow; Notebook services were prioritized in the recovery because of their active use by DM team members.
+
+The `lsst-lsp-int` instance is still largely down, except that the shared Qserv service that runs on the same underlying cluster is up.  It is expected that it will be possible to restore tomorrow as well.
+
+---
 **May 21st, 2019**  
 The Science Platform instances `lsst-lsp-stable` and `lsst-lsp-int` are currently down for a major reconfiguration of the underlying Kubernetes clusters.  We aim to restore normal operation of `lsst-lsp-stable` as soon as possible, ideally today.  Updates will be posted to #dm-lsp on LSST Slack.
 
