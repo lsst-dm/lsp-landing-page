@@ -1,3 +1,9 @@
+**May 22nd, 2019**  
+Normal service has been restored after the major Kubernetes engineering changes yesterday.  
+Check [here](https://github.com/lsst-dm/lsp-landing-page/blob/master/motd/stable.md) for more details and the complete list of messages.
+This is the main user-facing, " `-stable` " instance of the LSST Science Platform.  Nevertheless, note that this is still a developmental service and the underlying infrastructure is still under construction; while this instance is managed to avoid capriciously inconveniencing users, true "stability" cannot yet be assured.
+
+---
 **May 21st, 2019**
 Partial service, particularly for JupyterLab, has been restored to the `lsst-lsp-stable` Science Platform instance.  Some instability may still be observed due to DNS caching issues.  
 Check [here](https://github.com/lsst-dm/lsp-landing-page/blob/master/motd/stable.md) for more details and the complete list of messages.

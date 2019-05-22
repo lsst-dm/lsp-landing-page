@@ -1,3 +1,8 @@
+**May 22nd, 2019**  
+Most services have been restored after yesterday's Kubernetes engineering work.  WebDAV and the interaction of authorization with the Notebook Aspect still require work in the coming days.  
+This is the Integration (`-int`) instance of the LSST Science Platform.  Its functionality and behavior may be changed on short notice and its availability may be limited by testing and other activities.  Check [here](https://github.com/lsst-dm/lsp-landing-page/blob/master/motd/integration.md) for a complete list of messages.
+
+---
 **May 21st, 2019**  
 The Science Platform instances `lsst-lsp-stable` and `lsst-lsp-int` are currently down for a major reconfiguration of the underlying Kubernetes clusters.  `lsst-lsp-int` may be up and down periodically all week as various integration and configuration change tests are performed.
 
