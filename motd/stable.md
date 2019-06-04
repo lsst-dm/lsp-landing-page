@@ -1,3 +1,14 @@
+**June 3rd, 2019**
+Disregard "Dask Server Error" on startup of the notebook instance.
+Check [here](https://github.com/lsst-dm/lsp-landing-page/blob/master/motd/stable.md) for more details and the complete list of messages.
+
+We are consistently seeing a popup error on entry to the notebook aspect.
+"Dask Server Error" is the title of the popup.
+This error appears to be completely cosmetic and we have not observed any degraded performance since its appearance.
+Please ignore and close the popup.
+It is under current investigation.
+
+---
 **May 22nd, 2019**  
 Normal service has been restored after the major Kubernetes engineering changes yesterday.  
 Check [here](https://github.com/lsst-dm/lsp-landing-page/blob/master/motd/stable.md) for more details and the complete list of messages.
