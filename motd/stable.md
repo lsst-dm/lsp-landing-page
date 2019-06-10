@@ -1,3 +1,16 @@
+**June 10th, 2019**
+Reminder: Most users should be running a weekly image.
+Daily builds may be fragile.
+Check [here](https://github.com/lsst-dm/lsp-landing-page/blob/master/motd/stable.md) for more details and the complete list of messages.
+
+Note that the most recent weekly (`w_2019_23`) has a slight annoyance that the terminal, upon spawning, may appear blank.
+To fix this, change the terminal theme to `light` or `dark` via `Settings` --> `Terminal Theme` --> `[Light|Dark]`.
+
+Specifically, we are seeing problems with the `d_2019_06_10` build.
+We do our best to make sure all published builds are in working order, but the dailies will, but their very nature be more volatile.
+We make every effort to provide a working recent weekly.
+
+---
 **June 3rd, 2019**
 Disregard "Dask Server Error" on startup of the notebook instance.
 Check [here](https://github.com/lsst-dm/lsp-landing-page/blob/master/motd/stable.md) for more details and the complete list of messages.
