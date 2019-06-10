@@ -1,3 +1,13 @@
+**June 10th, 2019**
+Reminder: Most users should be running a weekly image.
+Daily builds may be fragile.
+Check [here](https://github.com/lsst-dm/lsp-landing-page/blob/master/motd/stable.md) for more details and the complete list of messages.
+
+Specifically, we are seeing problems with the `d_2019_06_10` build.
+We do our best to make sure all published builds are in working order, but the dailies will, but their very nature be more volitile.
+There will always be a working recent weekly.
+
+---
 **June 3rd, 2019**
 Disregard "Dask Server Error" on startup of the notebook instance.
 Check [here](https://github.com/lsst-dm/lsp-landing-page/blob/master/motd/stable.md) for more details and the complete list of messages.
