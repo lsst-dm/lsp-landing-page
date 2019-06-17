@@ -1,5 +1,5 @@
 **June 17th, 2019**
-Layout cache needs to be refreshed.
+Layout cache reset to defaults in most recent weekly.
 Check [here](https://github.com/lsst-dm/lsp-landing-page/blob/master/motd/stable.md) for more details and the complete list of messages.
 
 JupyterLab has changed how layout configuration is handled.
