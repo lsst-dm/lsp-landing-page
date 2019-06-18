@@ -1,3 +1,12 @@
+**June 17th, 2019**
+Layout cache reset to defaults in most recent weekly.
+Check [here](https://github.com/lsst-dm/lsp-landing-page/blob/master/motd/stable.md) for more details and the complete list of messages.
+
+JupyterLab has changed how layout configuration is handled.
+This means that starting with weekly `w_2019_24`, the layout cache will be refreshed.
+There is no action necessary for users, but the first time you log into a recent weekly or daily, none of the previously open notebook tabs will be open.
+
+---
 **June 10th, 2019**
 Reminder: Most users should be running a weekly image.
 Daily builds may be fragile.
