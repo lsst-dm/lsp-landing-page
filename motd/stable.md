@@ -1,3 +1,10 @@
+**June 20th, 2019**
+Power outage this Sunday at NCSA.
+Check [here](https://github.com/lsst-dm/lsp-landing-page/blob/master/motd/stable.md) for more details and the complete list of messages.
+
+Systems at NCSA will be powered down on Sunday June 23rd due to building work. We have a number of volunteers that have offered to try and bring the systems back on Sunday night, to minimise business hour disruption. However bear in mind that they might end up needing a fix from somebody who is not available, so we can't rule out the possibility that there will be after-effects on Monday morning
+
+---
 **June 17th, 2019**
 Layout cache reset to defaults in most recent weekly.
 Check [here](https://github.com/lsst-dm/lsp-landing-page/blob/master/motd/stable.md) for more details and the complete list of messages.
