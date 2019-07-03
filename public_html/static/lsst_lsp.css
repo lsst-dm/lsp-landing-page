@@ -40,16 +40,25 @@ footer {
     overflow: hidden;
 }
 
+.statement{
+  font-size: 0.8em;
+  white-space: pre-wrap;
+  font-weight: bold;
+
+}
+
 .motd {
-      height:100px;
+      font-size: 0.95em;
+      font-family: monospace;
+      height:200px;
       min-height:100px;
-      max-height:100px;
-      overflow: hidden;
+      max-height:200px;
+      overflow: auto;
       color: black;
 }
 .carousel {
   background: white;
-  border: 1px solid #eee;
+  border: 3px solid #eee;
   padding: 2px;
 }
 
