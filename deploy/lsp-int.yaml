@@ -1,0 +1,70 @@
+---
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: lsp-landing-page
+  namespace: default
+  labels:
+    application: "lsp-landing-page"
+    version: "2.0"
+    instance: "int"
+    owner: "mcarras2"
+spec:
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxSurge: 1
+      maxUnavailable: 1
+  minReadySeconds: 5
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        app: lsp-landing-page
+    spec:
+      containers:
+      - name: lsp-landing-page
+        image: mgckind/lsst-lsp-landing:2.0
+        command: ["python"]
+        args: ["server.py","-p","8080","--int"]
+        ports:
+        - containerPort: 8080
+---
+kind: Service
+apiVersion: v1
+metadata:
+  labels:
+  labels:
+    application: "lsst-lsp-landing"
+    version: "2.0"
+    instance: "int"
+    owner: "mcarras2"
+    app: lsp-landing-page
+  name: lsp-landing-page
+  namespace: default
+spec:
+  ports:
+  - port: 80
+    targetPort: 8080
+  selector:
+    app: lsp-landing-page
+---
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: lsp-landing-page
+  namespace: default
+  labels:
+    application: "lsst-lsp-landing"
+    version: "2.0"
+    instance: "int"
+    owner: "mcarras2"
+spec:
+  rules:
+  - host: lsst-lsp-int.ncsa.illinois.edu
+    http:
+      paths:
+      - backend:
+          serviceName: lsp-landing-page
+          servicePort: 80
+        path: /
