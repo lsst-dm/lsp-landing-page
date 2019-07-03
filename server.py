@@ -33,7 +33,7 @@ class LSPintHandler(tornado.web.RequestHandler):
 
 class LSPstableHandler(tornado.web.RequestHandler):
     def get(self):
-        self.render('index.html', title='', motd='stable.md')
+        self.render('index.html', title='', statement='', motd='stable.md')
 
 
 def run_app(args):
