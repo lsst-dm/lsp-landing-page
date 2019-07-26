@@ -6,7 +6,7 @@ metadata:
   namespace: default
   labels:
     application: "lsp-landing-page"
-    version: "2.1"
+    version: "2.2"
     instance: "stable"
     owner: "mcarras2"
 spec:
@@ -24,7 +24,7 @@ spec:
     spec:
       containers:
       - name: lsp-landing-page
-        image: mgckind/lsst-lsp-landing-page:2.1
+        image: mgckind/lsst-lsp-landing-page:2.2
         command: ["python"]
         args: ["server.py","-p","8080","--stable"]
         ports:
@@ -36,7 +36,7 @@ metadata:
   labels:
   labels:
     application: "lsst-lsp-landing"
-    version: "2.1"
+    version: "2.2"
     instance: "stable"
     owner: "mcarras2"
     app: lsp-landing-page
@@ -56,7 +56,7 @@ metadata:
   namespace: default
   labels:
     application: "lsst-lsp-landing"
-    version: "2.1"
+    version: "2.2"
     instance: "stable"
     owner: "mcarras2"
 spec:
