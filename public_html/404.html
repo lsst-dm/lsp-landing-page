@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>LSST Science Platform{{ title }}</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/showdown/1.9.0/showdown.min.js"></script>
+  <link rel="shortcut icon" href="favicon.ico">
+  <link rel="stylesheet" href="static/lsst_lsp.css" type="text/css"/>
+</head>
+<body>
+
+<div class="container">
+  <div class="jumbotron" style="background-color:white;">
+
+  <div class="row">
+  <div class="col-md-10" style="background-color:white; text-align: left">
+    <h4><a href="https://www.lsst.org/" target="_blank">
+      <img src="static/lsst_logo.png" class="img" alt="lsst_logo" width="35%"></a> Welcome to the LSST Science Platform{{ title }}</h4>
+</div>
+  <div class="col-md-2" style="background-color:white; text-align: right">
+    <div class="menub">
+        <a href="/"  class="selected"><h4><i class="fa fa-home" aria-hidden="true"></i> Home</h4></a>
+        <a href="https://nb.lsst.io/"  class="selected" target="_blank"><h4><i class="fa fa-question" aria-hidden="true"></i> Help</h4></a>
+    </div>
+</div>
+</div>
+  </div>
+
+ <div class="jumbotron">
+   <h2>Error 404: Page Not Found <br />Please return to <a href="/">Home</a> and try again </h2>
+
+ </div>
+
+  </div>
+
+<footer>
+  <p>
+		All rights reserved. &copy;2019
+		Board of Trustees of the <a href="http://illinois.edu/">University of Illinois</a>. &nbsp;|&nbsp;
+		<a href="https://www.vpaa.uillinois.edu/resources/web_privacy">Web Privacy Notice</a>
+	</p>
+</footer>
+<script>
+  getMsg = function (){
+  $.ajax({
+    url:"https://raw.githubusercontent.com/lsst-dm/lsp-landing-page/master/motd/{{ motd }}",
+    success: function (data){
+      temp = data.split('---',3);
+      for (i=0; i< temp.length; i++){
+         var converter = new showdown.Converter({
+             simpleLineBreaks: 'true',
+             strikethrough: 'true',
+             tables: 'true',
+             tasklists: 'true',
+             emoji: 'true'
+         }),
+         html = converter.makeHtml(temp[i]);
+         target = document.getElementById('msg'+i.toString()),
+         target.innerHTML = html;
+     };
+    }
+  });
+}
+     getMsg();
+</script>
+<!-- OneTrust Cookies Consent Notice (Production CDN, illinois.edu, en-GB) start -->
+<script src="https://cdn.cookielaw.org/consent/fd31c61a-15d6-4769-9802-5eafcc1098ba.js" type="text/javascript" charset="UTF-8"></script>
+<script type="text/javascript">
+function OptanonWrapper() { }
+</script>
+<!-- OneTrust Cookies Consent Notice (Production CDN, illinois.edu, en-GB) end -->
+</body>
+</html>

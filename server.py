@@ -19,6 +19,24 @@ def run_parser():
     return args
 
 
+class NotFoundintHandler(tornado.web.RequestHandler):
+    def prepare(self):
+        self.set_status(404)
+        self.render('404.html',
+                    title=': Integration',
+                    statement='',
+                    motd='integration.md')
+
+
+class NotFoundstableHandler(tornado.web.RequestHandler):
+    def prepare(self):
+        self.set_status(404)
+        self.render('404.html',
+                    title='',
+                    statement='',
+                    motd='stable.md')
+
+
 class LSPintHandler(tornado.web.RequestHandler):
     def get(self):
         st = "This is the Integration (-int) instance of the LSST Science " \
@@ -39,14 +57,18 @@ class LSPstableHandler(tornado.web.RequestHandler):
 def run_app(args):
     if args.int:
         Handler = LSPintHandler
+        Handler404 = NotFoundintHandler
     if args.stable:
         Handler = LSPstableHandler
+        Handler404 = NotFoundstableHandler
     settings = {
         "template_path": "public_html/",
         "static_path": "public_html/static/",
         "debug": True,
         }
-    return tornado.web.Application([(r"/", Handler), ], **settings)
+    return tornado.web.Application([(r"/", Handler), ],
+                                   default_handler_class=Handler404,
+                                   **settings)
 
 
 if __name__ == "__main__":
