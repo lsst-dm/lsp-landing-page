@@ -5,9 +5,6 @@ metadata:
   namespace: default
   labels:
     application: "lsst-lsp-landing"
-    version: "2.2.2"
-    stage: "int"
-    owner: "mcarras2"
 spec:
   replicas: 2
   template:
@@ -17,6 +14,6 @@ spec:
     spec:
       containers:
       - name: landing-page
-        image: mgckind/lsst-lsp-landing:2.2.2
+        image: mgckind/lsst-lsp-landing:stable-1.2
         ports:
         - containerPort: 8080
