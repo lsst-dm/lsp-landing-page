@@ -13,7 +13,7 @@ spec:
     spec:
       containers:
       - name: landing-page
-        image: mgckind/lsst-lsp-landing:stable-1.2
+        image: lsstsqre/lsp-landing-page:latest
         ports:
         - containerPort: 8080
         env:
