@@ -2,7 +2,6 @@ apiVersion: extensions/v1beta1
 kind: Deployment
 metadata:
   name: landing-page
-  namespace: default
   labels:
     application: "lsst-lsp-landing"
 spec:
