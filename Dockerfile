@@ -1,10 +1,11 @@
 # Unprivileged landing page for LSP running in port 8080
 # 
 FROM nginxinc/nginx-unprivileged:stable-alpine
-LABEL maintainer="mcarras2@illinois.edu"
-LABEL name="mgckind/lsst-lsp-landing"
-ARG BUILD_DATE
-ARG VERSION
-LABEL build-date=$BUILD_DATE
-LABEL version=$VERSION
-ADD public_html /usr/share/nginx/html
+
+# Add the static website, allowing nginx to write.
+# This is because entrypoint.sh runs as nginx, and
+# uses the environment variable to set the MOTD
+# link in the static site.
+ADD --chown=nginx public_html /usr/share/nginx/html
+ADD entrypoint.sh /entrypoint.sh
+CMD ["/bin/sh", "/entrypoint.sh"]

@@ -2,7 +2,6 @@ apiVersion: extensions/v1beta1
 kind: Deployment
 metadata:
   name: landing-page
-  namespace: default
   labels:
     application: "lsst-lsp-landing"
 spec:
@@ -14,6 +13,9 @@ spec:
     spec:
       containers:
       - name: landing-page
-        image: mgckind/lsst-lsp-landing:stable-1.2
+        image: lsstsqre/lsp-landing-page:latest
         ports:
         - containerPort: 8080
+        env:
+        - name: MOTD_URL
+          value: https://raw.githubusercontent.com/lsst-dm/lsp-landing-page/master/motd/stable.md
