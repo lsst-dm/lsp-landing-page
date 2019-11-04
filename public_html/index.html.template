@@ -45,7 +45,7 @@
 
   <div class="col-md-3" style=" text-align: center">
   <h4> Portal Aspect  </h4>
-  <a href="/portal/suit/" ><img src="static/portal_logo.png" class="img-circle" alt="portal" width="100px"></a>
+  <a href="/portal/app/" ><img src="static/portal_logo.png" class="img-circle" alt="portal" width="100px"></a>
 
   </div>
 
