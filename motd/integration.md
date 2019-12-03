@@ -1,11 +1,11 @@
 **December 3rd, 2019**
 We will be testing Portal (suit) release 1.1.1 and a substantially revised Helm-based deployment mechanism for the Portal application on `lsst-lsp-int` today.  The Portal application may go up and down without additional notice.
 
---
+---
 **November 4th, 2019**
 The TAP query interface has been fixed to follow the current LSST approach to authorization on the redirected results URLs from the TAP service.
 
---
+---
 **November 1st, 2019**  
 The Portal Aspect TAP query interface is currently unable to access the LSST TAP service because of changes to the A&A behavior of the asynchronous TAP query interface.
 This manifests itself as being able to construct a query (the schema data in the UI are populated from the *synchronous* TAP query interface) but not being able to see the results after it is executed.
