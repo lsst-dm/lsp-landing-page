@@ -1,3 +1,9 @@
+**December 4th, 2019**
+Normal Portal operations have been restored on the LSP integration instance.  The new Helm-based deployment infrastructure is in place, and release 1.1.1 of the Portal is being used.
+
+Check [here](https://github.com/lsst-dm/lsp-landing-page/blob/master/motd/integration.md) for a complete list of messages.
+
+---
 **December 3rd, 2019**
 We will be testing Portal (suit) release 1.1.1 and a substantially revised Helm-based deployment mechanism for the Portal application on `lsst-lsp-int` tomorrow, December 4th.  The Portal application may go up and down without additional notice.
 
