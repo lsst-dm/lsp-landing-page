@@ -1,3 +1,9 @@
+**December 5th, 2019**
+The "stable" instance of the LSP has been almost completely converted to a uniform Helm-based deployment.  Release 1.1.1 of the Portal application has been deployed and this has restored normal Portal interactions with the LSST TAP service on this instance.
+
+Check [here](https://github.com/lsst-dm/lsp-landing-page/blob/master/motd/stable.md) for more details and the complete list of messages.
+
+---
 **June 20th, 2019**
 Power outage this Sunday at NCSA.
 Check [here](https://github.com/lsst-dm/lsp-landing-page/blob/master/motd/stable.md) for more details and the complete list of messages.
