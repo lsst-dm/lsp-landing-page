@@ -71,6 +71,7 @@
     </div>
   </div>
 </div>
+<span>Check <a href="${MOTD_URL}">here</a> for a complete list of past messages.</span>
 
   </div>
 
